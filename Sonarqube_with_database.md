@@ -73,7 +73,7 @@ apt install net-tools
 1. Download [soarnqube](https://www.sonarqube.org/downloads/) and extract it.   
   ```sh 
   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.4.50792.zip
-  unzip sonarqube-8.9.2.46101.zip
+  unzip sonarqube-9.2.4.50792.zip
   ```
 
 1. Update sonar.properties with below information 
@@ -87,9 +87,10 @@ apt install net-tools
   #sonar.search.javaOpts=-Xmx512m -Xms512m -XX:MaxDirectMemorySize=256m -XX:+HeapDumpOnOutOfMemoryError
   ``
 
-1. Create a `/etc/systemd/system/sonarqube.service` file start sonarqube service at the boot time 
+1. Create a file as per the path `/etc/systemd/system/sonarqube.service` file start sonarqube service at the boot time 
   ```sh   
-  cat >> /etc/systemd/system/sonarqube.service <<EOL
+  vi /etc/systemd/system/sonarqube.service
+  Paste the below contanet
   [Unit]
   Description=SonarQube service
   After=syslog.target network.target
@@ -109,7 +110,6 @@ apt install net-tools
 
   [Install]
   WantedBy=multi-user.target
-  EOL
   ```
 
 1. Add sonar user and grant ownership to /opt/sonarqube directory 
