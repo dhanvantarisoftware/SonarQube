@@ -35,8 +35,12 @@ SonarQube is an open-source static testing analysis software, it is used by deve
   CREATE DATABASE sonarqube OWNER sonar;
   GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;
   ``` 
+  Exit from the Database
+  ```sh
+  exit
+  ```
 
-1. Restart postgres database to take latest changes effect 
+1. Restart postgres database to take latest changes effect. To restart switch to the root user and then restart
   ```sh 
   systemctl restart postgresql 
   systemctl status postgresql
@@ -72,6 +76,7 @@ apt install net-tools
 
 1. Download [soarnqube](https://www.sonarqube.org/downloads/) and extract it.   
   ```sh 
+  cd /opt
   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.4.50792.zip
   unzip sonarqube-9.2.4.50792.zip
   ```
@@ -81,13 +86,13 @@ apt install net-tools
   sonar.jdbc.username=<sonar_database_username>
   sonar.jdbc.password=<sonar_database_password>
 
-  #sonar.jdbc.username=sonar
-  #sonar.jdbc.password=admin
-  #sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
-  #sonar.search.javaOpts=-Xmx512m -Xms512m -XX:MaxDirectMemorySize=256m -XX:+HeapDumpOnOutOfMemoryError
+  sonar.jdbc.username=sonar
+  sonar.jdbc.password=admin
+  sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
+  sonar.search.javaOpts=-Xmx512m -Xms512m -XX:MaxDirectMemorySize=256m -XX:+HeapDumpOnOutOfMemoryError
   ``
 
-1. Create a file as per the path `/etc/systemd/system/sonarqube.service` file start sonarqube service at the boot time 
+1. Create a file in the path `/etc/systemd/system/sonarqube.service`. File starting as a sonarqube service at the boot time 
   vi /etc/systemd/system/sonarqube.service
   Paste the below content
   
