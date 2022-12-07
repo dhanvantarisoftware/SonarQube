@@ -88,9 +88,9 @@ apt install net-tools
   ``
 
 1. Create a file as per the path `/etc/systemd/system/sonarqube.service` file start sonarqube service at the boot time 
-  ```sh   
   vi /etc/systemd/system/sonarqube.service
-  Paste the below contanet
+  Paste the below content
+  
   [Unit]
   Description=SonarQube service
   After=syslog.target network.target
@@ -115,7 +115,7 @@ apt install net-tools
 1. Add sonar user and grant ownership to /opt/sonarqube directory 
   ```sh 
   useradd -d /opt/sonarqube sonar
-  chown -R sonar:sonar
+  chown -R sonar:sonar /opt/sonarqube
   ```
 
 1. Reload the demon and start sonarqube service 
