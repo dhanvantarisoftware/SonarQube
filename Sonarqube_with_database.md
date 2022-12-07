@@ -135,14 +135,3 @@ apt install net-tools
  2. start sonar service as a sonar user 
  3. user correct database credentials in the sonar.properties
  4. use instance which has atleast 2 GB of RAM
- 
-
-   
-## 🔗 My Profile
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/user/ar-shankar/)  
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ravdsun/)
-
-
-  ### 💡 Help/Suggestions or 🐛 Bugs
-
-Thank you for your interest in contributing to our project. Whether it is a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here](/issues)   
