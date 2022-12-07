@@ -74,7 +74,7 @@ apt install net-tools
 
  ## SonarQube Setup
 
-1. Download [soarnqube](https://www.sonarqube.org/downloads/) and extract it.   
+1. Download [sonarqube](https://www.sonarqube.org/downloads/) and extract it.   
   ```sh 
   cd /opt
   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.4.50792.zip
