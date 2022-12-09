@@ -50,17 +50,18 @@ SonarQube is an open-source static testing analysis software, it is used by deve
 
 
 apt install net-tools
+netstat -tulpn   (Command to check the postgres port)
 
 `Source: https://docs.sonarqube.org/latest/requirements/requirements/`
 
-1. Added below entries in `/etc/sysctl.conf`
+1. Added below entries in `vi /etc/sysctl.conf` at the end of the File.
   ```sh 
   vm.max_map_count=524288
   fs.file-max=131072
   ulimit -n 131072
   ulimit -u 8192
   ```
-1. Add below entries in `/etc/security/limits.conf`
+1. Add below entries in `vi /etc/security/limits.conf` before End of the file.
   ```sh 
   sonarqube   -   nofile   131072
   sonarqube   -   nproc    8192
@@ -78,9 +79,13 @@ apt install net-tools
   ```sh 
   cd /opt
   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.4.50792.zip
+  apt install unzip
   unzip sonarqube-9.2.4.50792.zip
   ```
-
+1. Use the find coommand to search the path of sonar.properties file.
+   ```sh
+   find / -name sonar.properties
+  ```
 1. Update sonar.properties with below information 
   ```sh
   sonar.jdbc.username=<sonar_database_username>
