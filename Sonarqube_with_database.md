@@ -83,8 +83,8 @@ apt install net-tools
 
 1. Update sonar.properties with below information 
   ```sh
-  sonar.jdbc.username=<sonar_database_username>
-  sonar.jdbc.password=<sonar_database_password>
+  #sonar.jdbc.username=<sonar_database_username>
+  #sonar.jdbc.password=<sonar_database_password>
 
   sonar.jdbc.username=sonar
   sonar.jdbc.password=admin
